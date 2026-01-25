@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="interiorpoint.in - Premium Interior Design Services in Mumbai. Transform your spaces with innovative and elegant designs.">
+    <meta name="keywords" content="Interior Design Mumbai, Home Decor, Interior Designers, Office Design, Residential Design">
+    <title>interiorpoint.in - Premium Interior Design Services in Mumbai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h1>interiorpoint.in</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Living Spaces</h1>
+            <p>Premium Interior Design Solutions for Mumbai's Modern Lifestyle</p>
+            <button class="cta-btn" onclick="scrollToContact()">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Design</h3>
+                    <p>Transform your apartments, villas, and houses into beautiful living spaces. We specialize in compact Mumbai homes, maximizing space and comfort while maintaining aesthetic appeal.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Commercial Spaces</h3>
+                    <p>Design professional office spaces, retail stores, and restaurants. We create environments that boost productivity and enhance customer experience in Mumbai's bustling business districts.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Space Planning</h3>
+                    <p>Expert space utilization for Mumbai's compact living. From 1 BHK to spacious bungalows, we optimize every square foot with innovative solutions.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Lighting Design</h3>
+                    <p>Strategic lighting solutions to enhance ambiance and functionality. Perfect for creating mood in Mumbai's modern homes and commercial spaces.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Color Consultation</h3>
+                    <p>Expert color palette selection that reflects Mumbai's vibrant culture while creating harmonious living environments tailored to your personality.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Renovation & Refurbishment</h3>
+                    <p>Complete renovation services for dated spaces. We handle everything from concept to execution in Mumbai's diverse architectural landscape.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">Living Room Design</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Modern Living Room - Bandra</h3>
+                        <p class="project-type">Residential</p>
+                        <p>Contemporary living space with minimalist aesthetic, perfect for Mumbai's cosmopolitan lifestyle. Features space-saving furniture and ambient lighting.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">Kitchen Design</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Modular Kitchen - Worli</h3>
+                        <p class="project-type">Residential</p>
+                        <p>Efficient modular kitchen designed for compact Mumbai apartments. Integrated storage, premium finishes, and ergonomic layout.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">Bedroom Design</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Master Bedroom Suite - Marine Drive</h3>
+                        <p class="project-type">Residential</p>
+                        <p>Luxurious bedroom with built-in wardrobes, accent walls, and sophisticated color palette. Creates a serene retreat in the heart of Mumbai.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">Office Design</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Corporate Office - DIFC</h3>
+                        <p class="project-type">Commercial</p>
+                        <p>Modern office space with collaborative areas, private cabins, and breakout zones. Designed to enhance productivity in Mumbai's financial hub.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">Retail Store</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Boutique Store - Colaba</h3>
+                        <p class="project-type">Commercial</p>
+                        <p>High-end retail space with sophisticated product displays and premium finishes. Located in Mumbai's trendy shopping district.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">Restaurant Design</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Fine Dining Restaurant - Fort</h3>
+                        <p class="project-type">Commercial</p>
+                        <p>Elegant dining space with warm ambiance, carefully curated lighting, and premium furnishings for an elevated dining experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About interiorpoint.in</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Transforming Spaces Since 2012</h3>
+                    <p>interiorpoint.in is a leading interior design studio based in Mumbai, dedicated to creating extraordinary living and working spaces. With over a decade of experience, we have designed hundreds of homes, offices, and commercial establishments across Mumbai and surrounding areas.</p>
+                    
+                    <h4>Our Expertise</h4>
+                    <ul class="expertise-list">
+                        <li>✓ Modern & Contemporary Design</li>
+                        <li>✓ Minimalist & Scandinavian Aesthetics</li>
+                        <li>✓ Traditional & Indian Design Elements</li>
+                        <li>✓ Luxury & Premium Interiors</li>
+                        <li>✓ Space Optimization for Compact Homes</li>
+                        <li>✓ Sustainable & Eco-Friendly Design</li>
+                    </ul>
+
+                    <h4>Why Choose Us?</h4>
+                    <p>Our team of certified interior designers understands Mumbai's unique architectural challenges and opportunities. We combine aesthetic excellence with practical solutions, ensuring every project reflects our clients' vision while respecting their budget and timeline.</p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>500+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>800+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>15+</h3>
+                        <p>Expert Designers</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>6</h3>
+                        <p>Design Awards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Mumbai Section -->
+    <section class="why-mumbai">
+        <div class="container">
+            <h2>Designing for Mumbai</h2>
+            <div class="mumbai-content">
+                <div class="mumbai-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Urban Compact Spaces</h3>
+                    <p>Expert at maximizing space in Mumbai's apartments, from 1 BHK to 4+ BHK configurations. We turn every corner into functional beauty.</p>
+                </div>
+                <div class="mumbai-card">
+                    <i class="fas fa-sun"></i>
+                    <h3>Coastal Climate Design</h3>
+                    <p>Designs optimized for Mumbai's humid climate, with materials and finishes that withstand coastal weather while maintaining elegance.</p>
+                </div>
+                <div class="mumbai-card">
+                    <i class="fas fa-city"></i>
+                    <h3>Metropolitan Lifestyle</h3>
+                    <p>Understanding the fast-paced Mumbai lifestyle, we create functional, beautiful spaces that support modern living demands.</p>
+                </div>
+                <div class="mumbai-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Local Partnership</h3>
+                    <p>Strong relationships with local vendors, contractors, and suppliers ensure quality execution and competitive pricing across Mumbai.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"interiorpoint.in transformed our 1 BHK apartment into a stunning, spacious-feeling home. The team was professional, on-time, and within budget. Highly recommended for anyone in Mumbai!"</p>
+                    <p class="client-name">- Priya Sharma, Andheri</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Our office redesign exceeded expectations. The new layout improved collaboration and employee satisfaction. interiorpoint.in understood our vision perfectly and executed flawlessly."</p>
+                    <p class="client-name">- Rajesh Nair, IT Professional, Fort</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The attention to detail and creative solutions were impressive. They helped us maximize our space while keeping costs reasonable. Best interior designers in Mumbai!"</p>
+                    <p class="client-name">- Neha Gupta, Bandra</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Our Office</h4>
+                        <p>Azad Seva Welfare Society, Kranti Nagar, Kandivali East, Mumbai 400101</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+919987859279</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>interiorpoint.quotes@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>interiorpoint.in</h4>
+                    <p>Transforming Mumbai's spaces into works of art. Your vision, our expertise.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Residential Design</a></li>
+                        <li><a href="#services">Commercial Design</a></li>
+                        <li><a href="#services">Space Planning</a></li>
+                        <li><a href="#services">Renovations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
