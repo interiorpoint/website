@@ -29,7 +29,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 10px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -118,7 +118,7 @@ body {
 .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: var(--white);
-    padding: 120px 20px;
+    padding: 120px 10px;
     text-align: center;
     min-height: 80vh;
     display: flex;
@@ -184,7 +184,7 @@ body {
 
 /* Services Section */
 .services {
-    padding: 80px 20px;
+    padding: 80px 10px;
     background: var(--light-bg);
 }
 
@@ -259,7 +259,7 @@ body {
 
 /* Portfolio Section */
 .portfolio {
-    padding: 80px 20px;
+    padding: 80px 10px;
 }
 
 .portfolio-grid {
@@ -323,7 +323,7 @@ body {
 
 /* About Section */
 .about {
-    padding: 80px 20px;
+    padding: 80px 10px;
     background: var(--light-bg);
 }
 
@@ -395,7 +395,7 @@ body {
 
 /* Why Mumbai Section */
 .why-mumbai {
-    padding: 80px 20px;
+    padding: 80px 10px;
 }
 
 .mumbai-content {
@@ -437,7 +437,7 @@ body {
 
 /* Testimonials Section */
 .testimonials {
-    padding: 80px 20px;
+    padding: 80px 10px;
     background: var(--light-bg);
 }
 
@@ -483,7 +483,7 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 80px 20px;
+    padding: 80px 10px;
 }
 
 .contact-wrapper {
@@ -535,7 +535,7 @@ body {
 footer {
     background: var(--primary-color);
     color: var(--white);
-    padding: 3rem 20px 1rem;
+    padding: 3rem 10px 1rem;
 }
 
 .footer-content {
@@ -672,7 +672,7 @@ footer {
     }
 
     .container {
-        padding: 0 12px;
+        padding: 0 10px;
     }
 }
 
