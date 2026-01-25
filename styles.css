@@ -16,6 +16,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -28,7 +29,9 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Navigation Bar */
@@ -38,6 +41,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    overflow-x: hidden;
 }
 
 .nav-wrapper {
@@ -665,6 +669,10 @@ footer {
 
     .stat-box h3 {
         font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 12px;
     }
 }
 
