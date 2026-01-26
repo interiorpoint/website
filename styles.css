@@ -42,13 +42,14 @@ body {
     top: 0;
     z-index: 100;
     overflow-x: hidden;
+    padding: 0.3rem 0;
 }
 
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0;
 }
 
 .logo {
@@ -58,8 +59,8 @@ body {
 }
 
 .logo-image {
-    width: 60px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
     object-fit: contain;
 }
 
