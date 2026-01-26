@@ -138,3 +138,63 @@ if (aboutStats && aboutStats.parentElement) {
 // Log page load
 console.log('InteriorPoint Website Loaded Successfully');
 console.log('Serving Premium Interior Design Services in Mumbai');
+
+// Carousel functionality
+let slideIndex = 1;
+
+function changeSlide(n) {
+    showSlide(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlide(slideIndex = n);
+}
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+    
+    if (slides[slideIndex - 1]) {
+        slides[slideIndex - 1].classList.add('active');
+    }
+    if (dots[slideIndex - 1]) {
+        dots[slideIndex - 1].classList.add('active');
+    }
+}
+
+// Initialize carousel on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Generate dots for all carousel slides
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dotsContainer = document.getElementById('carousel-dots');
+    
+    if (dotsContainer) {
+        slides.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.className = 'dot';
+            dot.onclick = () => currentSlide(index + 1);
+            dotsContainer.appendChild(dot);
+        });
+    }
+    
+    showSlide(slideIndex);
+    
+    // Auto advance carousel every 5 seconds
+    setInterval(() => {
+        changeSlide(1);
+    }, 5000);
+});
