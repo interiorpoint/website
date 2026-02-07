@@ -11,12 +11,13 @@ function loadHeaderFooter() {
                 <h1>interiorpoint.in</h1>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
             <button class="hamburger" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
@@ -55,6 +56,7 @@ function loadHeaderFooter() {
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </div>
 
