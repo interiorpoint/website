@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - interiorpoint.in</title>
+    <meta name="description" content="Interior design tips, trends, and guides for Mumbai homes.">
+    <link rel="canonical" href="https://interiorpoint.in/blog.html">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .blog-header h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .blog-header p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .blog-card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card-meta {
+            font-size: 0.85rem;
+            color: #95a5a6;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-card-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .blog-card-excerpt {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .blog-card-link {
+            color: #e74c3c;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+        }
+
+        .blog-card-link:hover {
+            gap: 12px;
+        }
+
+        .blog-card-link::after {
+            content: '→';
+        }
+
+        @media (max-width: 768px) {
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>Makeover and Renovation Blog</h1>
+            <p>Space‑smart layouts, storage solutions, lighting and decor tips for Mumbai 1BHK, 2BHK, 3BHK and 4BHK to boost style and comfort.</p>
+        </div>
+
+        <div class="blog-grid">
+            <!-- Blog Card 1 -->
+            <a href="mumbai-1bhk-villa-decorator-hacks.html" class="blog-card">
+                <div class="blog-card-image">🏡</div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">Home Decor Ideas</div>
+                    <h2 class="blog-card-title">How to Make Your Mumbai 1BHK Feel Like a Villa</h2>
+                    <p class="blog-card-excerpt">Discover 5 decorator hacks to transform your compact 350–450 sq ft flat into a spacious, elegant home using vertical planning, reflective surfaces, and smart furniture choices.</p>
+                    <span class="blog-card-link">Read Article</span>
+                </div>
+            </a>
+            <!-- Blog Card 2 -->
+            <a href="mumbai-2bhk-spacious-stylish-home.html" class="blog-card">
+                <div class="blog-card-image">🏡</div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">Mumbai 2BHK Layout Ideas</div>
+                    <h2 class="blog-card-title">Transform Your Mumbai 2BHK into a Spacious Stylish Home</h2>
+                    <p class="blog-card-excerpt">Discover smart layouts, space‑saving furniture, and stylish decor tips to make your Mumbai 2BHK feel larger, brighter, and effortlessly elegant.</p>
+                    <span class="blog-card-link">Read Article</span>
+                </div>
+            </a>
+            <!-- Blog Card 3 -->
+            <a href="mumbai-3bhk-makeover-smart-layouts-stylish-decor.html" class="blog-card">
+                <div class="blog-card-image">🏡</div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">3BHK Interior Styling Ideas</div>
+                    <h2 class="blog-card-title">Mumbai 3BHK Makeover Guide: Smart Layouts and Stylish Decor</h2>
+                    <p class="blog-card-excerpt">Upgrade your Mumbai 3BHK with clever layouts, multifunctional furniture, and decor strategies that maximize space, light, and modern style.</p>
+                    <span class="blog-card-link">Read Article</span>
+                </div>
+            </a>
+
+            <!-- More blog cards will be added here in the future -->
+        </div>
+    </div>
+</body>
+</html>
