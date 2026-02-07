@@ -684,6 +684,11 @@ footer {
         display: none;
     }
 
+    /* Prevent invisible nav from intercepting taps */
+    .nav-menu {
+        pointer-events: none;
+    }
+
     /* When menu is opened on mobile, show as a horizontal bar */
     .nav-menu.open {
         display: flex;
@@ -704,6 +709,10 @@ footer {
     .nav-menu.open a {
         padding: 10px 14px;
         display: inline-block;
+    }
+
+    .nav-menu.open {
+        pointer-events: auto;
     }
 
     .hero-content h1 {
