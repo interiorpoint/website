@@ -89,46 +89,45 @@ function initializeMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    if (hamburger) {
+    // Only initialize mobile menu behavior when both elements exist
+    if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
             const isOpen = navMenu.classList.toggle('open');
             hamburger.classList.toggle('active');
             hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
-    }
 
-    // Close menu when link is clicked
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu) navMenu.classList.remove('open');
-            if (hamburger) {
+        // Close menu when link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Responsive navigation: ensure menu closed when resizing
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('open');
                 hamburger.classList.remove('active');
                 hamburger.setAttribute('aria-expanded', 'false');
             }
         });
-    });
 
-    // Responsive navigation: ensure menu closed when resizing
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            if (navMenu) navMenu.classList.remove('open');
-            if (hamburger) {
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                navMenu.classList.remove('open');
                 hamburger.classList.remove('active');
                 hamburger.setAttribute('aria-expanded', 'false');
             }
-        }
-    });
-
-    // Keyboard Navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            if (navMenu) navMenu.classList.remove('open');
-            if (hamburger) {
-                hamburger.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-            }
-        }
-    });
+        });
+    } else {
+        // If hamburger or navMenu are not present (mobile hide), ensure no runtime errors
+        // and exit gracefully.
+        return;
+    }
 }
 
 // (handled inside initializeMobileMenu)

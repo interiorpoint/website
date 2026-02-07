@@ -677,44 +677,34 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Hide header navigation and hamburger on mobile only */
     .hamburger {
-        display: flex;
-    }
-    .nav-menu {
-        display: none;
+        display: none !important;
     }
 
-    /* Prevent invisible nav from intercepting taps */
     .nav-menu {
+        display: none !important;
         pointer-events: none;
     }
 
-    /* When menu is opened on mobile, show as a horizontal bar */
-    .nav-menu.open {
+    /* Center the logo when header links are hidden */
+    .nav-wrapper {
         display: flex;
-        flex-direction: row;
-        position: absolute;
-        top: 68px;
-        left: 0;
-        right: 0;
         justify-content: center;
-        gap: 1rem;
-        padding: 0.5rem 10px;
-        background: var(--white);
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        z-index: 150;
-        overflow-x: auto;
+        align-items: center;
+        padding: 6px 0;
     }
 
-    .nav-menu.open a {
-        padding: 10px 14px;
-        display: inline-block;
+    .logo {
+        gap: 0.5rem;
     }
 
-    .nav-menu.open {
-        pointer-events: auto;
+    .logo-image {
+        width: 48px;
+        height: 48px;
     }
 
+    /* Keep existing hero and typography adjustments */
     .hero-content h1 {
         font-size: 2.2rem;
     }
