@@ -126,13 +126,7 @@ function initializeMobileMenu() {
     });
 }
 
-// Close menu when link is clicked
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (navMenu) navMenu.style.display = 'none';
-        if (hamburger) hamburger.classList.remove('active');
-    });
-});
+// (handled inside initializeMobileMenu)
 
 // Smooth scroll to contact
 function scrollToContact() {
@@ -195,26 +189,9 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Responsive navigation
-if (window.innerWidth <= 768) {
-    if (navMenu) navMenu.style.display = 'none';
-}
+// Responsive navigation handled within initializeMobileMenu
 
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        if (navMenu) navMenu.style.display = 'flex';
-    } else {
-        if (navMenu) navMenu.style.display = 'none';
-    }
-});
-
-// Keyboard Navigation
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        if (navMenu) navMenu.style.display = 'none';
-        if (hamburger) hamburger.classList.remove('active');
-    }
-});
+// Keyboard navigation handled within initializeMobileMenu
 
 // Counter Animation for Stats
 function animateCounter(element, target, duration = 2000) {
