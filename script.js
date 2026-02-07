@@ -1,31 +1,88 @@
 // Load Header and Footer
-async function loadHeaderFooter() {
-    try {
-        // Load header
-        const headerResponse = await fetch('header.html');
-        const headerContent = await headerResponse.text();
-        const headerElement = document.getElementById('header');
-        if (headerElement) {
-            headerElement.innerHTML = headerContent;
-        }
-
-        // Load footer
-        const footerResponse = await fetch('footer.html');
-        const footerContent = await footerResponse.text();
-        const footerElement = document.getElementById('footer');
-        if (footerElement) {
-            footerElement.innerHTML = footerContent;
-        }
-
-        // Initialize hamburger menu after loading header
-        initializeMobileMenu();
-    } catch (error) {
-        console.error('Error loading header/footer:', error);
+function loadHeaderFooter() {
+    // Load header
+    const headerElement = document.getElementById('header');
+    if (headerElement) {
+        const headerHTML = `<nav class="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <img src="logo.png" alt="interiorpoint.in logo" class="logo-image">
+                <h1>interiorpoint.in</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</nav>`;
+        headerElement.innerHTML = headerHTML;
     }
+
+    // Load footer
+    const footerElement = document.getElementById('footer');
+    if (footerElement) {
+        const footerHTML = `<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>interiorpoint.in</h4>
+                <p>Transforming Mumbai's spaces into works of art. Your vision, our expertise.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61586791636838&sfnsn=wa"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/interiorpoint.in?utm_source=qr&igsh=MWZpZGxydGx5dmZqMg=="><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919867822265" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/interior-point-9b572a3a8/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Bespoke Furniture & Aluminum Solutions</a></li>
+                    <li><a href="services.html">Designer Blinds & Sun Control Films</a></li>
+                    <li><a href="services.html">Ceilings & Professional Painting</a></li>
+                    <li><a href="services.html">Modern Flooring & Wall Decor</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>`;
+        footerElement.innerHTML = footerHTML;
+    }
+
+    // Initialize hamburger menu after loading header
+    initializeMobileMenu();
 }
 
 // Call on page load
-document.addEventListener('DOMContentLoaded', loadHeaderFooter);
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadHeaderFooter);
+} else {
+    loadHeaderFooter();
+}
 
 // Mobile Menu Toggle
 function initializeMobileMenu() {
@@ -66,17 +123,6 @@ function initializeMobileMenu() {
             if (navMenu) navMenu.style.display = 'none';
             if (hamburger) hamburger.classList.remove('active');
         }
-    });
-}
-
-// Mobile Menu Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-        hamburger.classList.toggle('active');
     });
 }
 
