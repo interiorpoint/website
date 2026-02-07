@@ -40,7 +40,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     overflow-x: hidden;
     padding: 0.3rem 0;
 }
@@ -99,6 +99,17 @@ body {
     cursor: pointer;
 }
 
+/* Ensure hamburger is clickable and looks like a button */
+.hamburger {
+    background: transparent;
+    border: none;
+    padding: 8px;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
 .hamburger span {
     width: 25px;
     height: 3px;
@@ -106,6 +117,11 @@ body {
     margin: 5px 0;
     border-radius: 3px;
     transition: 0.3s;
+}
+
+/* make sure hamburger sits above other elements */
+.hamburger {
+    z-index: 1100;
 }
 
 /* Hero Section */
@@ -694,6 +710,10 @@ footer {
         font-size: 2.2rem;
     }
 
+    .hero {
+        padding: 60px 10px;
+    }
+
     .hero-content p {
         font-size: 1.1rem;
     }
@@ -727,6 +747,10 @@ footer {
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 1.8rem;
+    }
+
+    .hero {
+        padding: 40px 10px;
     }
 
     .services h2,
