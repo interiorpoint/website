@@ -18,11 +18,11 @@ function loadHeaderFooter() {
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </div>
 </nav>`;
@@ -91,37 +91,42 @@ function initializeMobileMenu() {
 
     if (hamburger) {
         hamburger.addEventListener('click', () => {
-            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+            const isOpen = navMenu.classList.toggle('open');
             hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
     }
 
     // Close menu when link is clicked
     document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
-            if (navMenu) navMenu.style.display = 'none';
-            if (hamburger) hamburger.classList.remove('active');
+            if (navMenu) navMenu.classList.remove('open');
+            if (hamburger) {
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
         });
     });
 
-    // Responsive navigation
-    if (window.innerWidth <= 768) {
-        if (navMenu) navMenu.style.display = 'none';
-    }
-
+    // Responsive navigation: ensure menu closed when resizing
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) {
-            if (navMenu) navMenu.style.display = 'flex';
-        } else {
-            if (navMenu) navMenu.style.display = 'none';
+            if (navMenu) navMenu.classList.remove('open');
+            if (hamburger) {
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
         }
     });
 
     // Keyboard Navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            if (navMenu) navMenu.style.display = 'none';
-            if (hamburger) hamburger.classList.remove('active');
+            if (navMenu) navMenu.classList.remove('open');
+            if (hamburger) {
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
         }
     });
 }

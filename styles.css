@@ -664,9 +664,30 @@ footer {
     .hamburger {
         display: flex;
     }
-
     .nav-menu {
         display: none;
+    }
+
+    /* When menu is opened on mobile, show as a horizontal bar */
+    .nav-menu.open {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.5rem 10px;
+        background: var(--white);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        z-index: 150;
+        overflow-x: auto;
+    }
+
+    .nav-menu.open a {
+        padding: 10px 14px;
+        display: inline-block;
     }
 
     .hero-content h1 {
@@ -717,8 +738,15 @@ footer {
         font-size: 1.5rem;
     }
 
+    /* Keep horizontal menu on very small screens but allow scrolling */
     .nav-menu {
-        flex-direction: column;
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+
+    .nav-menu a {
+        padding: 10px 12px;
+        font-size: 1rem;
     }
 
     .stat-box {
