@@ -1,3 +1,74 @@
+// Load Header and Footer
+async function loadHeaderFooter() {
+    try {
+        // Load header
+        const headerResponse = await fetch('header.html');
+        const headerContent = await headerResponse.text();
+        const headerElement = document.getElementById('header');
+        if (headerElement) {
+            headerElement.innerHTML = headerContent;
+        }
+
+        // Load footer
+        const footerResponse = await fetch('footer.html');
+        const footerContent = await footerResponse.text();
+        const footerElement = document.getElementById('footer');
+        if (footerElement) {
+            footerElement.innerHTML = footerContent;
+        }
+
+        // Initialize hamburger menu after loading header
+        initializeMobileMenu();
+    } catch (error) {
+        console.error('Error loading header/footer:', error);
+    }
+}
+
+// Call on page load
+document.addEventListener('DOMContentLoaded', loadHeaderFooter);
+
+// Mobile Menu Toggle
+function initializeMobileMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+            hamburger.classList.toggle('active');
+        });
+    }
+
+    // Close menu when link is clicked
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu) navMenu.style.display = 'none';
+            if (hamburger) hamburger.classList.remove('active');
+        });
+    });
+
+    // Responsive navigation
+    if (window.innerWidth <= 768) {
+        if (navMenu) navMenu.style.display = 'none';
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            if (navMenu) navMenu.style.display = 'flex';
+        } else {
+            if (navMenu) navMenu.style.display = 'none';
+        }
+    });
+
+    // Keyboard Navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (navMenu) navMenu.style.display = 'none';
+            if (hamburger) hamburger.classList.remove('active');
+        }
+    });
+}
+
 // Mobile Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
