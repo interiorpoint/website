@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /*
+
+Disallow: /sign-in
+
+Sitemap: https://interiorpoint.in/sitemap.xml
